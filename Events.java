@@ -17,7 +17,7 @@ public class Events implements Listener{
 				if (event.getItem().getItemMeta().equals(ItemManager.thor.getItemMeta())) {
 					Player player = event.getPlayer();
 					event.getClickedBlock().getWorld().strikeLightning(event.getClickedBlock().getLocation());
-					player.sendMessage("YENNY DOODOO! EVERY USE HAS A COST...");
+					player.sendMessage("BOY! EVERY USE HAS A COST...");
 					for(int i = 0; i < 3; i++) {
 					player.getWorld().spawnEntity(player.getLocation(), EntityType.ENDERMAN);
 					
