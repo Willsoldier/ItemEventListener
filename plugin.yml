@@ -1,0 +1,9 @@
+main: me.Adrenalize.TrialTwo.Main
+name: TrialTwo
+version: 1.0
+author: Adrenalize
+
+commands:
+  wither:
+  thor:
+  
