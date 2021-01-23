@@ -1,0 +1,50 @@
+package me.Adrenalize.TrialTwo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.bukkit.Material;
+import org.bukkit.enchantments.Enchantment;
+import org.bukkit.inventory.ItemFlag;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+
+public class ItemManager {
+	public static ItemStack thor;
+	public static ItemStack wBow;
+	
+	public static void iman() {
+		createThor();
+		createWBow();
+	}
+	
+	private static void createThor() {
+		ItemStack item = new ItemStack(Material.IRON_AXE, 1);
+		ItemMeta meta = item.getItemMeta();
+		meta.setDisplayName("§4William's Hammer of Justice");
+		List<String> lore = new ArrayList<>();
+		lore.add("§7Forged with the impeccable");
+		lore.add("§7power of mah nih will smig");
+		meta.setLore(lore);
+		meta.addEnchant(Enchantment.LUCK, 2, true);
+		meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		meta.setUnbreakable(true);
+		item.setItemMeta(meta);
+		thor = item;
+	}
+	private static void createWBow() {
+		ItemStack item = new ItemStack(Material.BOW, 1);
+		ItemMeta meta = item.getItemMeta();
+		meta.setDisplayName("§4Wither Bow");
+		List<String> lore = new ArrayList<>();
+		lore.add("§7Shoots Witer skulls");
+		meta.setLore(lore);
+		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
+		meta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
+		meta.setUnbreakable(true);
+		item.setItemMeta(meta);
+		wBow = item;
+	}
+
+}
